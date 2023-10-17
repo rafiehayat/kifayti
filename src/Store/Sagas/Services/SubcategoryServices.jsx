@@ -1,5 +1,5 @@
 export async function addRecord(payload){
-    let response = await fetch("/maincategory",{
+    let response = await fetch("/subcategory",{
         method:"post",
         headers:{
             "content-type":"application/json"
@@ -9,7 +9,7 @@ export async function addRecord(payload){
     return await response.json()
 }
 export async function getRecord(){
-    let response = await fetch("/maincategory",{
+    let response = await fetch("/subcategory",{
         method:"get",
         headers:{
             "content-type":"application/json"
@@ -18,7 +18,7 @@ export async function getRecord(){
     return await response.json()
 }
 export async function updateRecord(payload){
-    let response = await fetch("/maincategory/"+payload.id,{
+    let response = await fetch("/subcategory/"+payload.id,{
         method:"put",
         headers:{
             "content-type":"application/json"
@@ -28,7 +28,7 @@ export async function updateRecord(payload){
     return await response.json()
 }
 export async function deleteRecord(payload){
-    let response = await fetch("/maincategory/"+payload.id,{
+    let response = await fetch("/subcategory/"+payload.id,{
         method:"delete",
         headers:{
             "content-type":"application/json"

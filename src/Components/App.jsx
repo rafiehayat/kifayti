@@ -9,6 +9,17 @@ import Error from './Error'
 import AdminHome from './Admin/AdminHome'
 import Maincategory from './Admin/Maincategory/Maincategory'
 import CreateMaincategory from './Admin/Maincategory/CreateMaincategory'
+import UpdateMaincategory from './Admin/Maincategory/UpdateMaincategory'
+import CreateSubcategory from './Admin/Subcategory/CreateSubcategory'
+import UpdateSubcategory from './Admin/Subcategory/UpdateSubcategory'
+import Subcategory from './Admin/Subcategory/Subcategory'
+import Brand from './Admin/Brand/Brand'
+import CreateBrand from './Admin/Brand/CreateBrand'
+import UpdateBrand from './Admin/Brand/UpdateBrand'
+import Product from './Admin/Product/Product'
+import CreateProduct from './Admin/Product/CreateProduct'
+import UpdateProduct from './Admin/Product/UpdateProduct'
+
 
 
 export default function App() {
@@ -19,11 +30,24 @@ export default function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
+
         <Route path='/admin' element={<AdminHome/>}/>
+
         <Route path='/admin/maincategory' element={<Maincategory/>}/>
         <Route path='/admin/maincategory/create' element={<CreateMaincategory/>}/>
+        <Route path='/admin/maincategory/update/:id' element={<UpdateMaincategory/>}/>
 
+        <Route path='/admin/subcategory' element={<Subcategory/>}/>
+        <Route path='/admin/subcategory/create' element={<CreateSubcategory/>}/>
+        <Route path='/admin/subcategory/update/:id' element={<UpdateSubcategory/>}/>
 
+        <Route path='/admin/brand' element={<Brand/>}/>
+        <Route path='/admin/brand/create' element={<CreateBrand/>}/>
+        <Route path='/admin/brand/update/:id' element={<UpdateBrand/>}/>
+
+        <Route path='/admin/product' element={<Product/>}/>
+        <Route path='/admin/product/create' element={<CreateProduct/>}/>
+        <Route path='/admin/product/update/:id' element={<UpdateProduct/>}/>
 
         <Route path='/*' element={<Error/>}/>
 

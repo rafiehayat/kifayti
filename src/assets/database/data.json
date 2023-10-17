@@ -10,16 +10,40 @@
     {
       "name": "female",
       "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Kids"
     }
   ],
   "subcategory": [
     {
       "id": 0
+    },
+    {
+      "id": 1,
+      "name": "trousers"
     }
   ],
   "brand": [
     {
       "id": 0
+    },
+    {
+      "name": "Mufti",
+      "id": 1
+    },
+    {
+      "name": "Levis",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Zara"
+    },
+    {
+      "name": "Gucci",
+      "id": 4
     }
   ],
   "product": [
