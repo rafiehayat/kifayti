@@ -4,12 +4,22 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
 
-import { addProduct, getProduct } from "../../../Store/ActionCreators/ProductActionCreators"
+import { addProduct } from "../../../Store/ActionCreators/ProductActionCreators"
+import { getMaincategory } from "../../../Store/ActionCreators/MaincategoryActionCreators"
+import { getSubcategory } from "../../../Store/ActionCreators/SubcategoryActionCreators"
+import { getBrand } from "../../../Store/ActionCreators/BrandActionCreators"
+
+
+
 export default function CreateProduct() {
     let name = useRef("")
     let navigate = useNavigate()
     let dispatch = useDispatch()
-    let ProductStateData = useSelector((state) => state.ProductStateData)
+    // let ProductStateData = useSelector((state) => state.ProductStateData)
+    let MaincategoryStateData = useSelector((state) => state.MaincategoryStateData)
+    let SubcategoryStateData = useSelector((state) => state.SubcategoryStateData)
+    let BrandStateData = useSelector((state) => state.BrandStateData)
+
     function getInputData(e) {
         name.current = e.target.value
     }
@@ -24,7 +34,10 @@ export default function CreateProduct() {
         }
     }
     function getAPIData() {
-        dispatch(getProduct())
+        // dispatch(getProduct())
+        dispatch(getMaincategory())
+        dispatch(getSubcategory())
+        dispatch(getBrand())
     }
     useEffect(() => {
         getAPIData()
