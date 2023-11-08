@@ -7,6 +7,15 @@ export async function addRecord(payload){
         body:JSON.stringify(payload)
     })
     return await response.json()
+
+    // let response = await fetch("/product",{
+        // method:"post",
+        // headers:{
+            // "content-type":"application/json"
+        // },
+        // body:(payload)
+    // })
+    // return await response.json()
 }
 export async function getRecord(){
     let response = await fetch("/product",{
@@ -26,6 +35,15 @@ export async function updateRecord(payload){
         body:JSON.stringify(payload)
     })
     return await response.json()
+
+    // let response = await fetch("/product/"+payload.id,{
+    //     method:"put",
+    //     headers:{
+    //         // "content-type":"application/json"
+    //     },
+    //     body:payload
+    // })
+    // return await response.json()
 }
 export async function deleteRecord(payload){
     let response = await fetch("/product/"+payload.id,{

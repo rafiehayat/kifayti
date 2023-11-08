@@ -3,6 +3,7 @@ import MaincategorySagas from "./MaincategorySagas";
 import SubcategorySagas from "./SubcategorySagas";
 import BrandSagas from "./BrandSagas";
 import ProductSagas from "./ProductSagas";
+import TestimonialSagas from "./TestimonialSagas";
 
 export default function* RootSagas(){
     yield all([
@@ -10,5 +11,6 @@ export default function* RootSagas(){
         SubcategorySagas(),
         BrandSagas(),
         ProductSagas(),
+        TestimonialSagas()
     ])
 }

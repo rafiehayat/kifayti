@@ -19,6 +19,12 @@ import UpdateBrand from './Admin/Brand/UpdateBrand'
 import Product from './Admin/Product/Product'
 import CreateProduct from './Admin/Product/CreateProduct'
 import UpdateProduct from './Admin/Product/UpdateProduct'
+import User from './Admin/User/User'
+
+
+import Testimonial from './Admin/Testimonial/Testimonial'
+import CreateTestimonial from './Admin/Testimonial/CreateTestimonial'
+import UpdateTestimonial from './Admin/Testimonial/UpdateTestimonial'
 
 
 
@@ -48,6 +54,12 @@ export default function App() {
         <Route path='/admin/product' element={<Product/>}/>
         <Route path='/admin/product/create' element={<CreateProduct/>}/>
         <Route path='/admin/product/update/:id' element={<UpdateProduct/>}/>
+
+        <Route path='/admin/users' element={<User/>}/>
+        
+        <Route path='/admin/testimonial' element={<Testimonial/>} />
+            <Route path='/admin/testimonial/create' element={<CreateTestimonial/>} />
+            <Route path='/admin/testimonial/update/:id' element={<UpdateTestimonial/>} />
 
         <Route path='/*' element={<Error/>}/>
 

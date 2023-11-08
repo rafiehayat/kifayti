@@ -11,6 +11,20 @@ export function ProductReducer(state = [], action) {
             newState = state
             index = state.findIndex((x) => x.id === Number(action.payload.id))
             newState[index].name = action.payload.name
+            newState[index].maincategory = action.payload.maincategory
+            newState[index].subcategory = action.payload.subcategory
+            newState[index].brand = action.payload.brand
+            newState[index].color = action.payload.color
+            newState[index].size = action.payload.size
+            newState[index].baseprice = action.payload.baseprice
+            newState[index].discount = action.payload.discount
+            newState[index].finalprice = action.payload.finalprice
+            newState[index].stock = action.payload.stock
+            newState[index].description = action.payload.description
+            newState[index].pic1 = action.payload.pic1
+            newState[index].pic2 = action.payload.pic2
+            newState[index].pic3 = action.payload.pic3
+            newState[index].pic4 = action.payload.pic4
             return newState
         case DELETE_PRODUCT_RED:
             newState = state

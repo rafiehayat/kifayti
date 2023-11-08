@@ -65,7 +65,7 @@ export default function Navbar() {
                     {
                         localStorage.getItem("login") ?
                             <div className="nav-item dropdown bg-danger">
-                                <a to="#" className="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown">Rafie Hayat</a>
+                                <a href="/#" className="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown">Rafie Hayat</a>
                                 <div className="dropdown-menu fade-up m-0">
                                     <Link to="/profile" className="dropdown-item">Proifle</Link>
                                     <Link to="/cart" className="dropdown-item">Cart</Link>
