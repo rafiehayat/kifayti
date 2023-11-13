@@ -4,16 +4,16 @@
       "id": 0
     },
     {
-      "name": "male",
-      "id": 1
+      "id": 1,
+      "name": "Kids"
     },
     {
-      "name": "female",
-      "id": 2
+      "id": 2,
+      "name": "Female"
     },
     {
       "id": 3,
-      "name": "Kids"
+      "name": "Male"
     }
   ],
   "subcategory": [
@@ -68,6 +68,18 @@
     {
       "name": "D & G",
       "id": 6
+    },
+    {
+      "name": "Adidas",
+      "id": 7
+    },
+    {
+      "name": "Cobb",
+      "id": 8
+    },
+    {
+      "name": "Polo",
+      "id": 9
     }
   ],
   "product": [
@@ -420,6 +432,34 @@
   "user": [
     {
       "id": 0
+    },
+    {
+      "name": "Syed Rafie Hayat",
+      "username": "Hayat",
+      "email": "rafiehayat5@gmail.com",
+      "phone": "07979973557",
+      "password": "123456",
+      "role": "Admin",
+      "id": 1,
+      "address": "",
+      "pin": "",
+      "city": "",
+      "state": "",
+      "pic": ""
+    },
+    {
+      "name": "Rafie Hayat",
+      "username": "Rafie",
+      "email": "rafiehayat5@gmail.com",
+      "phone": "07979973557",
+      "password": "123456",
+      "role": "Buyer",
+      "id": 2,
+      "address": "Okhla ,New Delhi",
+      "pin": "854301",
+      "city": "Delhi",
+      "state": "New Delhi",
+      "pic": "p2.jpg"
     }
   ],
   "cart": [
@@ -450,6 +490,55 @@
   "testimonial": [
     {
       "id": 0
+    },
+    {
+      "name": "Rafie Hayat",
+      "profile": "react developer",
+      "pic": "team-2.jpg",
+      "message": "As per the price value, it is okay.",
+      "id": 1
+    },
+    {
+      "name": "Rosy yadav",
+      "profile": "student..",
+      "pic": "testimonial-1.jpg",
+      "message": "As per the price value, it is okay....",
+      "id": 2
+    },
+    {
+      "name": "Raja kumar",
+      "profile": "react developer",
+      "pic": "team-3.jpg",
+      "message": "Awesome fiting, superb comfortable....",
+      "id": 3
+    },
+    {
+      "name": "Nitin Chauhan",
+      "profile": "Full Stack Trainer",
+      "pic": "testimonial-3.jpg",
+      "message": "The Noise Halo Plus Elite Smartwatch is a true marvel of technology that has left me impressed beyond measure. As an avid tech enthusiast and fitness aficionado, I've had the pleasure of testing numerous smartwatches, but none have come close to the experience offered by the Halo Plus Elite.",
+      "id": 4
+    },
+    {
+      "name": "Sumit Kumar",
+      "profile": "Bank Manager",
+      "pic": "team-4.jpg",
+      "message": "The watch hangs up frequently. Sometimes when charge goes below 50%, sometimes above 60%. Again you have to restart or reboot the watch. That is the only problem. I am using it when I go for walk. Not calling on blue tooth etc.",
+      "id": 5
+    },
+    {
+      "name": "Mohan Mishra",
+      "profile": "Bankar",
+      "pic": "testimonial-2.jpg",
+      "message": "Very good quality and main thing about touch screen working very smoothly. But one point tha noise company should give some notice on straps . But all over this watch at this price very good and looks cool",
+      "id": 6
+    },
+    {
+      "name": "Kanak Thakur",
+      "profile": "Teacher",
+      "pic": "testimonial-1.jpg",
+      "message": "The premium metallic build of the watch is not only aesthetically pleasing but also robust. It exudes a sense of quality and durability, making it suitable for any occasion. The round dial design adds a touch of sophistication to your wrist.\n\nBluetooth calling is a standout feature, allowing you to answer calls directly from your smartwatch. It's incredibly convenient and helps you stay connected without having to reach for your phone constantly. Smart Gesture Control simplifies navigation, making the user experience seamless and intuitive.",
+      "id": 7
     }
   ]
 }

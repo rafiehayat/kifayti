@@ -1,9 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function Navbar() {
+    let navigate = useNavigate()
     function logout() {
         localStorage.clear()
+        navigate("/login")
     }
     return (
         <>
@@ -67,7 +69,7 @@ export default function Navbar() {
                             <div className="nav-item dropdown bg-danger">
                                 <a href="/#" className="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown">Rafie Hayat</a>
                                 <div className="dropdown-menu fade-up m-0">
-                                    <Link to="/profile" className="dropdown-item">Proifle</Link>
+                                    <Link to="/profile" className="dropdown-item">Profile</Link>
                                     <Link to="/cart" className="dropdown-item">Cart</Link>
                                     <Link to="/checkout" className="dropdown-item">Checkout</Link>
                                     <button className="dropdown-item" onClick={logout}>Logout</button>

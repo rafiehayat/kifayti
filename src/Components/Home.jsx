@@ -3,6 +3,8 @@ import Testimonials from './Testimonials'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { getProduct } from "../Store/ActionCreators/ProductActionCreators"
+
+
 import { Link } from 'react-router-dom'
 
 export default function Home() {
@@ -141,7 +143,7 @@ export default function Home() {
             </div>
             {/* <!-- Fact End --> */}
 
-            {/* <!-- Team Start --> */}
+            {/* <!-- Product Start --> */}
             <div className="container-xxl py-5">
                 <div className="container">
                     <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -171,7 +173,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            {/* <!-- Team End --> */}
+            {/* <!-- Product End --> */}
 
             <Testimonials />
         </>

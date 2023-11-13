@@ -335,6 +335,16 @@
     color: var(--primary);
 }
 
+.testimonial-message{
+    text-align: justify;
+    overflow-y: auto;
+    height: 200px;
+}
+
+.testimonial-message::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
 .footer .btn.btn-link {
     display: block;
     margin-bottom: 5px;
