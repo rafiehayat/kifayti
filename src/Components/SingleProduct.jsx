@@ -6,6 +6,8 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 import { getProduct } from '../Store/ActionCreators/ProductActionCreators'
+import { addCart, getCart } from '../Store/ActionCreators/CartActionCreators'
+import { addWishlist, getWishlist} from '../Store/ActionCreators/WishlistActionCreators'
 
 export default function SingleProduct() {
   let [data, setData] = useState({
@@ -21,8 +23,53 @@ export default function SingleProduct() {
   let navigate = useNavigate()
   let dispatch = useDispatch()
   let ProductStateData = useSelector((state) => state.ProductStateData)
+  let CartStateData = useSelector((state) => state.CartStateData)
+  let WishlistStateData = useSelector((state) => state.WishlistStateData)
+  function addToCart(){
+    var item = CartStateData.slice(1).find((x)=>x.userid===localStorage.getItem("userid")&& x.productid===(id))
+    if(item)
+    navigate("/cart")
+    else{
+      item = {
+        userid:localStorage.getItem("userid"),
+        productid:id,
+        name:data.name,
+        brand:data.brand,
+        color:data.color,
+        size:data.size,
+        price:data.finalprice,
+        qty:qty,
+        total:data.finalprice*qty,
+        pic:data.pic1,
+      }
+      dispatch(addCart(item))
+      navigate("/cart")
+    }
+  }
+  function addToWishlist(){
+    var item = WishlistStateData.slice(1).find((x)=>x.userid===localStorage.getItem("userid")&& x.productid===(id))
+    if(item)
+    navigate("/profile")
+    else{
+      item = {
+        userid:localStorage.getItem("userid"),
+        productid:id,
+        name:data.name,
+        brand:data.brand,
+        color:data.color,
+        size:data.size,
+        price:data.finalprice,
+        pic:data.pic1,
+      }
+      dispatch(addWishlist(item))
+      navigate("/profile")
+    }
+  }
   function getAPIData() {
     dispatch(getProduct())
+    dispatch(getCart())
+    dispatch(getWishlist())
+
     if (ProductStateData.length) {
       let item = ProductStateData.slice(1).find((x) => x.id === Number(id))
       if (item) {
@@ -37,7 +84,7 @@ export default function SingleProduct() {
   }
   useEffect(() => {
     getAPIData()
-  }, [ProductStateData.length,id])
+  }, [ProductStateData.length,id,CartStateData.length,WishlistStateData.length])
   return (
     <>
       <div className="container-fluid my-3">
@@ -125,8 +172,8 @@ export default function SingleProduct() {
                   </tr>
                   <tr>
                     <td colSpan={2}>
-                      <button className='btn btn-primary w-50'><i className='fa fa-shopping-cart'></i> Add to Cart</button>
-                      <button className='btn btn-success w-50'><i className='fa fa-heart'></i> Add to Wishlist</button>
+                      <button className='btn btn-primary w-50' onClick={addToCart}><i className='fa fa-shopping-cart'></i> Add to Cart</button>
+                      <button className='btn btn-success w-50' onClick={addToWishlist}><i className='fa fa-heart'></i> Add to Wishlist</button>
                     </td>
                   </tr>
                 </tbody>

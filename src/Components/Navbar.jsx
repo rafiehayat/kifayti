@@ -62,16 +62,24 @@ export default function Navbar() {
                         <Link to="/about" className="nav-item nav-link">About</Link>
                         <Link to="/shop" className="nav-item nav-link">Shop</Link>
                         <Link to="/contact" className="nav-item nav-link">Contact</Link>
-                        <Link to="/admin" className="nav-item nav-link">Admin</Link>
                     </div>
                     {
                         localStorage.getItem("login") ?
                             <div className="nav-item dropdown bg-danger">
-                                <a href="/#" className="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown">Rafie Hayat</a>
+                                <a href="/#" className="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown">{localStorage.getItem("name")}</a>
                                 <div className="dropdown-menu fade-up m-0">
-                                    <Link to="/profile" className="dropdown-item">Profile</Link>
-                                    <Link to="/cart" className="dropdown-item">Cart</Link>
-                                    <Link to="/checkout" className="dropdown-item">Checkout</Link>
+                                    {
+                                        localStorage.getItem("role") === "Admin" ?
+                                            <Link to="/admin" className="dropdown-item">Profile</Link> :
+                                            <Link to="/profile" className="dropdown-item">Profile</Link>
+                                    }
+                                    {
+                                        localStorage.getItem("role") === "Buyer" ?
+                                            <>
+                                                <Link to="/cart" className="dropdown-item">Cart</Link>
+                                                <Link to="/checkout" className="dropdown-item">Checkout</Link>
+                                            </> : ""
+                                    }
                                     <button className="dropdown-item" onClick={logout}>Logout</button>
                                 </div>
                             </div>

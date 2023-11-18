@@ -1,7 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Footer() {
+    let [email, setEmail] = useState("")
+    let [show, setShow] = useState(false)
+    let [message, setMessage] = useState("")
+    async function postData() {
+        let response = await fetch("/newsletter", {
+            method: "get",
+            headers: {
+                "content-type": "application/json"
+            }
+        })
+        response = await response.json()
+        let item = response.find((x) => x.email === email)
+        setShow(true)
+        if (item)
+            setMessage("Your Email is Already Registered With Us!!!")
+        else {
+            response = await fetch("/newsletter",{
+                method:"post",
+                headers:{
+                    "content-type":"application/json"
+                },
+                body:JSON.stringify({email:email})
+            })
+            response = await response.json()
+            setMessage("Thank to Register Your Email With Us, Now We Will Send Emails Regarding our Latest Products and Deals")
+            setEmail("")
+        }
+    }
     return (
         <>
             {/* <!-- Footer Start --> */}
@@ -10,7 +38,7 @@ export default function Footer() {
                     <div className="row g-5">
                         <div className="col-lg-4 col-md-6">
                             <h4 className="text-light mb-4">Address</h4>
-                            <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i>A-43, Sector 16, Noida, India</p>
+                            <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i> Sector 16, Noida, India</p>
                             <p className="mb-2"><i className="fa fa-phone-alt me-3"></i><Link className='text-light' to="tel:7979973557">7979973557</Link></p>
                             <p className="mb-2"><i className="fa fa-envelope me-3"></i><Link className='text-light' to="mailto:rafiehayat5@gmail.com">rafiehayat5@gmail.com</Link></p>
                             <div className="d-flex pt-2">
@@ -24,16 +52,21 @@ export default function Footer() {
                             <h4 className="text-light mb-4">Quick Links</h4>
                             <Link className="btn btn-link" to="/about">About Us</Link>
                             <Link className="btn btn-link" to="/term">Terms and Conditions</Link>
-                            <Link className="btn btn-link" to="/privacy">Privacy Policy</Link>
+                            <Link className="btn btn-link" to="/privacy">Privcy Policy</Link>
                             <Link className="btn btn-link" to="/refund-policy">Refund Policy</Link>
                             <Link className="btn btn-link" to="/contact">Contact Us</Link>
                         </div>
                         <div className="col-lg-5 col-md-6">
                             <h4 className="text-light mb-4">Newsletter</h4>
-                            <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                            <div className="position-relative mx-auto" style={{maxWidth: "400px"}}>
-                                <input className="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"/>
-                                    <button type="button" className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                            <p>Subscribe our newsletter service to get updated about our latest products and great deals</p>
+                            {
+                                show?
+                                <p className='text-light'>{message}</p>:
+                                ""
+                            }
+                            <div className="position-relative mx-auto" style={{ maxWidth: "400px" }}>
+                                <input className="form-control border-0 w-100 py-3 ps-4 pe-5" onChange={(e)=>setEmail(e.target.value)} type="email" name='email' placeholder="Your email" value={email} />
+                                <button type="button" className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" onClick={postData}>Subscribe</button>
                             </div>
                         </div>
                     </div>

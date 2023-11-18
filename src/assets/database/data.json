@@ -441,11 +441,11 @@
       "password": "123456",
       "role": "Admin",
       "id": 1,
-      "address": "",
-      "pin": "",
-      "city": "",
-      "state": "",
-      "pic": ""
+      "address": "Okhla Vihar",
+      "pin": "854301",
+      "city": "Delhi",
+      "state": "New Delhi",
+      "pic": "p16.jpg"
     },
     {
       "name": "Rafie Hayat",
@@ -465,26 +465,246 @@
   "cart": [
     {
       "id": 0
+    },
+    {
+      "userid": null,
+      "productid": "18",
+      "name": "Male Jeans Slim  Fit",
+      "brand": "Mufti",
+      "color": "Black",
+      "size": "36",
+      "price": 1716,
+      "qty": 1,
+      "total": 1716,
+      "pic": "p16.jpg",
+      "id": 1
     }
   ],
   "wishlist": [
     {
       "id": 0
+    },
+    {
+      "userid": "2",
+      "productid": "19",
+      "name": "Male jeans Adidas",
+      "brand": "Adidas",
+      "color": "Black",
+      "size": "34",
+      "price": 2475,
+      "pic": "p7.jpg",
+      "id": 1
+    },
+    {
+      "userid": "2",
+      "productid": "14",
+      "name": "Kids Jeans Tommy Hilfiger",
+      "brand": "Tommy Hilfiger",
+      "color": "Black",
+      "size": "26",
+      "price": 2500,
+      "pic": "p43.jpg",
+      "id": 2
+    },
+    {
+      "userid": "2",
+      "productid": "16",
+      "name": "Male Jeans Regular Fit",
+      "brand": "Adidas",
+      "color": "Blue",
+      "size": "34",
+      "price": 1288,
+      "pic": "p44.jpg",
+      "id": 3
     }
   ],
   "checkout": [
     {
       "id": 0
+    },
+    {
+      "userid": "2",
+      "paymentmode": "COD",
+      "paymentstatus": "Pending",
+      "orderstatus": "Order is Placed",
+      "subtotal": 25278,
+      "shipping": 0,
+      "total": 25278,
+      "date": "2023-11-13T15:34:39.591Z",
+      "products": [
+        {
+          "userid": "2",
+          "productid": "19",
+          "name": "Male jeans Adidas",
+          "brand": "Adidas",
+          "color": "Black",
+          "size": "34",
+          "price": 2475,
+          "qty": 4,
+          "total": 9900,
+          "pic": "p7.jpg",
+          "id": 1
+        },
+        {
+          "userid": "2",
+          "productid": "14",
+          "name": "Kids Jeans Tommy Hilfiger",
+          "brand": "Tommy Hilfiger",
+          "color": "Black",
+          "size": "26",
+          "price": 2500,
+          "qty": 1,
+          "total": 2500,
+          "pic": "p43.jpg",
+          "id": 2
+        },
+        {
+          "userid": "2",
+          "productid": "13",
+          "name": "Female Shirt Gucci",
+          "brand": "Gucci",
+          "color": "White",
+          "size": "M",
+          "price": 6439,
+          "qty": 2,
+          "total": 12878,
+          "pic": "p72.jpg",
+          "id": 3
+        }
+      ],
+      "id": 1
+    },
+    {
+      "userid": "2",
+      "paymentmode": "COD",
+      "paymentstatus": "Done",
+      "orderstatus": "Order is Placed",
+      "subtotal": 2475,
+      "shipping": 0,
+      "total": 2475,
+      "date": "2023-11-13T15:38:20.758Z",
+      "products": [
+        {
+          "userid": "2",
+          "productid": "19",
+          "name": "Male jeans Adidas",
+          "brand": "Adidas",
+          "color": "Black",
+          "size": "34",
+          "price": 2475,
+          "qty": 1,
+          "total": 2475,
+          "pic": "p7.jpg",
+          "id": 1
+        }
+      ],
+      "id": 2
+    },
+    {
+      "userid": "2",
+      "paymentmode": "COD",
+      "paymentstatus": "Done",
+      "orderstatus": "Order in Transit",
+      "subtotal": 2576,
+      "shipping": 0,
+      "total": 2576,
+      "date": "2023-11-15T15:32:51.370Z",
+      "products": [
+        {
+          "userid": "2",
+          "productid": "16",
+          "name": "Male Jeans Regular Fit",
+          "brand": "Adidas",
+          "color": "Blue",
+          "size": "34",
+          "price": 1288,
+          "qty": 2,
+          "total": 2576,
+          "pic": "p44.jpg",
+          "id": 1
+        }
+      ],
+      "id": 3
+    },
+    {
+      "userid": "2",
+      "paymentmode": "COD",
+      "paymentstatus": "Pending",
+      "orderstatus": "Order is Placed",
+      "subtotal": 3864,
+      "shipping": 0,
+      "total": 3864,
+      "date": "2023-11-16T04:55:28.997Z",
+      "products": [
+        {
+          "userid": "2",
+          "productid": "16",
+          "name": "Male Jeans Regular Fit",
+          "brand": "Adidas",
+          "color": "Blue",
+          "size": "34",
+          "price": 1288,
+          "qty": 3,
+          "total": 3864,
+          "pic": "p44.jpg",
+          "id": 2
+        }
+      ],
+      "id": 4
     }
   ],
-  "newslatter": [
+  "newsletter": [
     {
       "id": 0
+    },
+    {
+      "email": "rafiehayat5@gmail.com",
+      "id": 1
     }
   ],
   "contactus": [
     {
       "id": 0
+    },
+    {
+      "name": "Syed Rafie Hayat",
+      "email": "rafiehayat5@gmail.com",
+      "phone": "07979973557",
+      "subject": "test",
+      "message": "This is a test",
+      "date": "2023-11-15T05:12:55.586Z",
+      "status": "Active",
+      "id": 1
+    },
+    {
+      "name": "Nitin Chauhan",
+      "email": "vishankchauhan@gmail.com",
+      "phone": "9873848046",
+      "subject": "This is Sample Message",
+      "message": "This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message This is Sample Message ",
+      "date": "2023-11-01T06:34:50.805Z",
+      "id": 2,
+      "status": "Done"
+    },
+    {
+      "name": "Deepak Singh Gusain",
+      "email": "deepak@gmail.com",
+      "phone": "9876848484",
+      "subject": "This is Sample Message",
+      "message": "This is Sample MessageThis is Sample MessageThis is Sample MessageThis is Sample MessageThis is Sample MessageThis is Sample MessageThis is Sample MessageThis is Sample MessageThis is Sample MessageThis is Sample Message",
+      "date": "2023-11-02T05:47:50.548Z",
+      "status": "Done",
+      "id": 3
+    },
+    {
+      "name": "Nitin Chauhan",
+      "email": "vishankchauhan@gmail.com",
+      "phone": "9873848046",
+      "subject": "AI that makes you more productive",
+      "message": "AI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productiveAI that makes you more productive",
+      "date": "2023-11-02T06:04:50.293Z",
+      "status": "Done",
+      "id": 4
     }
   ],
   "testimonial": [

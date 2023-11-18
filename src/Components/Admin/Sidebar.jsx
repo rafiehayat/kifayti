@@ -10,7 +10,7 @@ export default function Sidebar() {
             <Link to="/admin/subcategory" className="list-group-item list-group-item-action"><i className='fa fa-list'></i><span className='float-end'>Subcategory</span></Link>
             <Link to="/admin/brand" className="list-group-item list-group-item-action"><i className='fa fa-list'></i><span className='float-end'>Brand</span></Link>
             <Link to="/admin/product" className="list-group-item list-group-item-action"><i className='fa fa-list '></i><span className='float-end'>Product</span></Link>
-            <Link to="/admin/newslatter" className="list-group-item list-group-item-action"><i className='fa fa-envelope'></i><span className='float-end'>Newslatter</span></Link>
+            <Link to="/admin/newsletter" className="list-group-item list-group-item-action"><i className='fa fa-envelope'></i><span className='float-end'>Newsletter</span></Link>
             <Link to="/admin/contactus" className="list-group-item list-group-item-action"><i className='fa fa-phone'></i><span className='float-end'>ContactUs</span></Link>
             <Link to="/admin/checkout" className="list-group-item list-group-item-action"><i className='fa fa-shopping-cart'></i><span className='float-end'>Checkout</span></Link>
             <Link to="/admin/testimonial" className="list-group-item list-group-item-action"><i className='fa fa-star'></i><span className='float-end'>Testimonials</span></Link>
